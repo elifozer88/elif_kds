@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Ortalama Verileri Fetch İşlemi
+
     fetch('/api/anasayfa/ortalama-verileri')
         .then(response => {
             if (!response.ok) {
@@ -8,17 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(data => {
-            // 9. Sınıfları başa almak için sıralama
+           
             data.sort((a, b) => {
                 const order = ['9. Sınıf', '10. Sınıf', '11. Sınıf', '12. Sınıf'];
                 return order.indexOf(a.sinif_grubu) - order.indexOf(b.sinif_grubu);
             });
 
-            // Grafik için etiketler ve değerler
+           
             const labels = data.map(item => item.sinif_grubu);
             const values = data.map(item => parseFloat(item.toplam_ortalama));
 
-            // Grafik renk ayarları
             const backgroundColors = [
                 'rgba(75, 192, 192, 0.2)', // Yeşil
                 'rgba(54, 162, 235, 0.2)', // Mavi
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'rgba(255, 99, 132, 1)'
             ];
 
-            // Bar Grafik Oluşturma
+           
             const ctx = document.getElementById('ortalamaBarChart').getContext('2d');
             new Chart(ctx, {
                 type: 'bar',
