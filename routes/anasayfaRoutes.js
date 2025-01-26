@@ -18,11 +18,11 @@ router.get('/ortalama-verileri', async (req, res) => {
             GROUP BY sinif_grubu;
         `;
 
-        const [results] = await db.promise().query(query); // .promise() kullanın
-        console.log('API Sorgu Sonuçları:', results); // Sonuçları kontrol etmek için log ekleyin
+        const [results] = await db.promise().query(query); 
+        console.log('API Sorgu Sonuçları:', results);
         res.json(results);
     } catch (err) {
-        console.error('Hata:', err.message); // Hata mesajını loglayın
+        console.error('Hata:', err.message); 
         res.status(500).send('Sunucu hatası');
     }
 });
