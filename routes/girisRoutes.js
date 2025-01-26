@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../config/db');
 
 
-// Sabit kullanıcı adı ve şifre
+
 const VALID_USER = {
     kullanici_adi: 'elifozer',
     sifre: '8888',
