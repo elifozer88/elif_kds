@@ -6,7 +6,7 @@
     <title>Elif Kolejleri - Kurslar</title>
     <link rel="stylesheet" href="../css/anasayfa.css">
     <style>
-        /* Tablo için iç CSS */
+       
         .table-container {
             margin: 30px auto;
             width: 90%;
@@ -87,22 +87,22 @@
 
         /* Farklı Dönemler İçin Renkler */
         .table-container:nth-of-type(2) .styled-table {
-            background-color: #d1f2eb; /* Turkuaz */
+            background-color: #d1f2eb; 
         }
 
         .table-container:nth-of-type(3) .styled-table {
-            background-color: #f9e79f; /* Sarı */
+            background-color: #f9e79f; 
         }
 
         .table-container:nth-of-type(4) .styled-table {
-            background-color: #fadbd8; /* Pembe */
+            background-color: #fadbd8;
         }
 
         .table-container:nth-of-type(5) .styled-table {
-            background-color: #d6eaf8; /* Açık Mavi */
+            background-color: #d6eaf8; 
         }
 
-        /* Buton Renkleri */
+
         .styled-table tbody tr td button {
             padding: 5px 10px;
             border: none;
@@ -112,11 +112,11 @@
         }
 
         .styled-table tbody tr td button:nth-child(1) {
-            background-color: #ff0000; /* Kırmızı */
+            background-color: #ff0000; 
         }
 
         .styled-table tbody tr td button:nth-child(2) {
-            background-color: #4caf50; /* Yeşil */
+            background-color: #4caf50;
         }
     </style>
 </head>
@@ -133,19 +133,16 @@
         </ul>
     </div>
 
-    <!-- Ana İçerik -->
     <div class="main-content">
         <div class="header">
             <h1>Kurslar</h1>
             <button class="logout">Çıkış</button>
         </div>
 
-        <!-- Kurs Aç Butonu -->
         <div class="button-container">
             <button id="openModal">Kurs Aç</button>
         </div>
 
-        <!-- Modal Penceresi -->
         <div class="modal" id="modal">
             <h3>Kurs Aç</h3>
             <label for="classSelect">Sınıf Seç:</label>
@@ -168,7 +165,6 @@
             <button id="closeModal">Kapat</button>
         </div>
 
-        <!-- Gelecek Dönem Kurs Tablosu -->
         <div class="table-container" id="newCourseTableContainer" style="display:none;">
             <h2>Gelecek Dönem Açılacak Kurslar</h2>
             <table class="styled-table" id="newCourseTable">
@@ -183,7 +179,6 @@
             </table>
         </div>
 
-        <!-- Önceki Tablolar -->
         <div class="table-container">
             <h2>2024 Güz Dönemi Kursları</h2>
             <table class="styled-table">
