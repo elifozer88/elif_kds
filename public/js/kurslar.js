@@ -2,10 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const donemSecimi = document.getElementById('donemSecimi');
     const kursListesi = document.getElementById('kursListesi');
 
-    /**
-     * Verilen dönem için kursları API'den çeker.
-     * @param {string} donem - Seçilen dönem (ör. "2024-guz").
-     */
+
     function fetchKurslar(donem) {
         // Backend endpoint
         const endpoint = `http://localhost:3000/api/kurslar?donem=${donem}`;
@@ -29,10 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    /**
-     * Gelen kurs verilerini ekrana liste olarak ekler.
-     * @param {Array} kurslar - Kurs verilerinden oluşan dizi.
-     */
+
     function renderKurslar(kurslar) {
         kursListesi.innerHTML = ''; // Listeyi temizle
         if (!kurslar || kurslar.length === 0) {
@@ -41,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Her kursu listeye ekle
         kurslar.forEach(kurs => {
             const listItem = document.createElement('li');
             listItem.textContent = `Kurs ID: ${kurs.kurs_id}, Ders: ${kurs.ders_id}, Şube: ${kurs.sube}`;
@@ -49,9 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /**
-     * Dönem seçimi değiştiğinde API'yi çağırır.
-     */
+   
     donemSecimi.addEventListener('change', (event) => {
         const selectedDonem = event.target.value;
         console.log(`Seçilen Dönem: ${selectedDonem}`); // Seçilen dönemi logla
