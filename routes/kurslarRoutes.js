@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../config/db'); 
 
-// Endpoint: Kursları döneme göre getir
+
 router.get('/kurslar', async (req, res) => {
     const donem = req.query.donem;
 
