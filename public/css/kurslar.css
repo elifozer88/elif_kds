@@ -1,11 +1,10 @@
-/* Tablo Konteyner */
 .table-container {
     margin: 30px auto;
     width: 90%;
     text-align: center;
 }
 
-/* Stilize Tablo */
+
 .styled-table {
     width: 100%;
     border-collapse: collapse;
@@ -39,7 +38,7 @@
     border-bottom: none;
 }
 
-/* Responsive Tablolar */
+
 @media (max-width: 768px) {
     .styled-table {
         font-size: 14px;
