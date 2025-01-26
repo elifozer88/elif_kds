@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chartsContainer = document.getElementById('chartsContainer'); 
 
     const dersIsimleri = {
-        10: 'İngilizce', // İngilizce en başta
+        10: 'İngilizce', 
         1: 'Matematik',
         2: 'Fizik',
         3: 'Kimya',
