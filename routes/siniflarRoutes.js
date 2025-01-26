@@ -4,26 +4,25 @@ const db = require('../config/db');
 
 
 router.get('/get-ortalama', async (req, res) => {
-    const donem = req.query.donem; // Dönem parametresi
+    const donem = req.query.donem;
 
-    // Eğer dönem parametresi gönderilmemişse hata döndür
+
     if (!donem) {
         return res.status(400).json({ error: 'Dönem parametresi gerekli.' });
     }
 
-    // Dönemlere göre tablo adlarını haritalama
+
     const tabloMap = {
         '2023-guz': '2023_birinci_donem',
         '2023-bahar': '2023_ikinci_donem',
         '2024-guz': 'sinav_sonuclari',
     };
 
-    const tabloAdi = tabloMap[donem]; // Döneme karşılık gelen tablo adı
+    const tabloAdi = tabloMap[donem]; 
     if (!tabloAdi) {
         return res.status(400).json({ error: 'Geçersiz dönem parametresi.' });
     }
 
-    // SQL sorgusu
     const query = `
         SELECT  
             CASE 
@@ -41,17 +40,16 @@ router.get('/get-ortalama', async (req, res) => {
     `;
 
     try {
-        console.log('Çalıştırılan SQL sorgusu:', query); // Sorguyu logla
-        const [results] = await db.promise().query(query); // Sorguyu çalıştır
-
-        console.log('Sorgu sonucu:', results); // Sonuçları logla
+        console.log('Çalıştırılan SQL sorgusu:', query); 
+        const [results] = await db.promise().query(query); 
+        console.log('Sorgu sonucu:', results);
         if (!results || results.length === 0) {
             return res.status(200).json({ message: 'Kayıt bulunamadı.', data: [] });
         }
 
-        res.json(results); // Sonuçları döndür
+        res.json(results); 
     } catch (err) {
-        console.error('Veritabanı hatası:', err.message); // Hata mesajını logla
+        console.error('Veritabanı hatası:', err.message); 
         res.status(500).json({ error: 'Veritabanı hatası oluştu.' });
     }
 });
