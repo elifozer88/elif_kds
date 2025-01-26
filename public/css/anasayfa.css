@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #1a237e;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar img {
+    max-width: 140px;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.menu {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    text-align: center;
+    padding: 20px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #3949ab;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu li a.active {
+    background-color: #3949ab;
+}
+
+.menu li:hover {
+    background-color: #3949ab;
+}
+.stats-table {
+    width: 60%; /* Tablo genişliği */
+    margin: 20px auto; /* Ortalamak için */
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.stats-table th {
+    background-color: #1a237e;
+    color: #fff;
+    font-weight: bold;
+}
+
+.stats-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.stats-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.logout {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout:hover {
+    background-color: #d32f2f;
+}
+
+/* Grafik Alanı */
+canvas {
+    display: block;
+    margin: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

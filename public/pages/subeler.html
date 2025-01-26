@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şubeler</title>
+    <link rel="stylesheet" href="/css/subeler.css">
+</head>
+<body>
+    <!-- Yan Menü -->
+    <div class="sidebar">
+        <h2>Elif Kolejleri</h2>
+        <img src="/images/logo.png" alt="Elif Kolejleri Logo">
+        <ul class="menu">
+            <li><a href="/pages/anasayfa.html">ANA SAYFA</a></li>
+            <li><a href="/pages/siniflar.html">SINIFLAR</a></li>
+            <li><a href="/pages/subeler.html" class="active">ŞUBELER</a></li>
+            <li><a href="/pages/kurslar.html">KURSLAR</a></li>
+            <li><button onclick="handleLogout()">ÇIKIŞ</button></li>
+        </ul>
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Şubeler</h1>
+        </div>
+
+        <!-- Form ve Filtre Alanı -->
+        <div class="form-section">
+            <h2>Dönem ve Sınıf Seçimi</h2>
+            <div class="form-group">
+                <label for="donemSecimi">Dönem Seç:</label>
+                <select id="donemSecimi" class="filter-select">
+                    
+                    <option value="2024-guz">2024 Güz Dönemi</option>
+                    <option value="2023-bahar">2023 Bahar Dönemi</option>
+                    <option value="2023-guz">2023 Güz Dönemi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sinifSecimi">Sınıf Seç:</label>
+                <select id="sinifSecimi" class="filter-select">
+                    <option value="9">9. Sınıf</option>
+                    <option value="10">10. Sınıf</option>
+                    <option value="11">11. Sınıf</option>
+                    <option value="12">12. Sınıf</option>
+                </select>
+            </div>
+            <button id="getDataBtn" class="filter-button">Verileri Getir</button>
+        </div>
+
+        <!-- Grafik Alanı -->
+        <div id="chartsContainer" class="container">
+            <h2>Şubelerin Ders Ortalamaları</h2>
+            <!-- Grafikler buraya eklenecek -->
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/subeler.js"></script>
+    <script>
+        const handleLogout = () => {
+            window.location.href = '/pages/giris.html'; // Çıkış işlemi
+        };
+    </script>
+</body>
+</html>

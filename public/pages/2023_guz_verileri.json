@@ -1,0 +1,224 @@
+[
+    { "sinif_adi": "9-A", "ders_id": 1, "toplam_ortalama": 86.27 },
+    { "sinif_adi": "9-A", "ders_id": 2, "toplam_ortalama": 73 },
+    { "sinif_adi": "9-A", "ders_id": 3, "toplam_ortalama": 72 },
+    { "sinif_adi": "9-A", "ders_id": 4, "toplam_ortalama": 87 },
+    { "sinif_adi": "9-A", "ders_id": 5, "toplam_ortalama": 78 },
+    { "sinif_adi": "9-A", "ders_id": 6, "toplam_ortalama": 71 },
+    { "sinif_adi": "9-A", "ders_id": 7, "toplam_ortalama": 88 },
+    { "sinif_adi": "9-A", "ders_id": 8, "toplam_ortalama": 86 },
+    { "sinif_adi": "9-A", "ders_id": 9, "toplam_ortalama": 87 },
+    { "sinif_adi": "9-A", "ders_id": 10, "toplam_ortalama":  88},
+    { "sinif_adi": "9-B", "ders_id": 1, "toplam_ortalama": 86},
+    { "sinif_adi": "9-B", "ders_id": 2, "toplam_ortalama": 72 },
+    { "sinif_adi": "9-B", "ders_id": 3, "toplam_ortalama": 86 },
+    { "sinif_adi": "9-B", "ders_id": 4, "toplam_ortalama": 87 },
+    { "sinif_adi": "9-B", "ders_id": 5, "toplam_ortalama": 74 },
+    { "sinif_adi": "9-B", "ders_id": 6, "toplam_ortalama": 63 },
+    { "sinif_adi": "9-B", "ders_id": 7, "toplam_ortalama": 89 },
+    { "sinif_adi": "9-B", "ders_id": 8, "toplam_ortalama": 87.8 },
+    { "sinif_adi": "9-B", "ders_id": 9, "toplam_ortalama": 87.4 },
+    { "sinif_adi": "9-B", "ders_id": 10, "toplam_ortalama": 87.2 },
+    { "sinif_adi": "9-C", "ders_id": 1, "toplam_ortalama": 87},
+    { "sinif_adi": "9-C", "ders_id": 2, "toplam_ortalama": 75 },
+    { "sinif_adi": "9-C", "ders_id": 3, "toplam_ortalama": 84 },
+    { "sinif_adi": "9-C", "ders_id": 4, "toplam_ortalama": 68 },
+    { "sinif_adi": "9-C", "ders_id": 5, "toplam_ortalama": 65 },
+    { "sinif_adi": "9-C", "ders_id": 6, "toplam_ortalama": 84 },
+    { "sinif_adi": "9-C", "ders_id": 7, "toplam_ortalama": 87 },
+    { "sinif_adi": "9-C", "ders_id": 8, "toplam_ortalama": 97 },
+    { "sinif_adi": "9-C", "ders_id": 9, "toplam_ortalama":  75},
+    { "sinif_adi": "9-C", "ders_id": 10, "toplam_ortalama":  88},
+  
+       
+        { "sinif_adi": "11-A", "ders_id": 1, "toplam_ortalama": 74 },
+        { "sinif_adi": "11-A", "ders_id": 2, "toplam_ortalama": 69 },
+        { "sinif_adi": "11-A", "ders_id": 3, "toplam_ortalama": 77 },
+        { "sinif_adi": "11-A", "ders_id": 4, "toplam_ortalama": 80 },
+        { "sinif_adi": "11-A", "ders_id": 5, "toplam_ortalama": 67 },
+        { "sinif_adi": "11-A", "ders_id": 6, "toplam_ortalama": 73 },
+        { "sinif_adi": "11-A", "ders_id": 7, "toplam_ortalama": 83 },
+        { "sinif_adi": "11-A", "ders_id": 8, "toplam_ortalama": 70 },
+        { "sinif_adi": "11-A", "ders_id": 9, "toplam_ortalama": 74 },
+        { "sinif_adi": "11-A", "ders_id": 10, "toplam_ortalama": 79 },
+      
+        
+        { "sinif_adi": "11-B", "ders_id": 1, "toplam_ortalama": 78 },
+        { "sinif_adi": "11-B", "ders_id": 2, "toplam_ortalama": 72 },
+        { "sinif_adi": "11-B", "ders_id": 3, "toplam_ortalama": 73 },
+        { "sinif_adi": "11-B", "ders_id": 4, "toplam_ortalama": 79 },
+        { "sinif_adi": "11-B", "ders_id": 5, "toplam_ortalama": 68 },
+        { "sinif_adi": "11-B", "ders_id": 6, "toplam_ortalama": 75 },
+        { "sinif_adi": "11-B", "ders_id": 7, "toplam_ortalama": 80 },
+        { "sinif_adi": "11-B", "ders_id": 8, "toplam_ortalama": 71 },
+        { "sinif_adi": "11-B", "ders_id": 9, "toplam_ortalama": 76 },
+        { "sinif_adi": "11-B", "ders_id": 10, "toplam_ortalama": 88 },
+      
+        
+        { "sinif_adi": "11-C", "ders_id": 1, "toplam_ortalama": 66},
+        { "sinif_adi": "11-C", "ders_id": 2, "toplam_ortalama": 74 },
+        { "sinif_adi": "11-C", "ders_id": 3, "toplam_ortalama": 75 },
+        { "sinif_adi": "11-C", "ders_id": 4, "toplam_ortalama": 78 },
+        { "sinif_adi": "11-C", "ders_id": 5, "toplam_ortalama":88 },
+        { "sinif_adi": "11-C", "ders_id": 6, "toplam_ortalama": 76 },
+        { "sinif_adi": "11-C", "ders_id": 7, "toplam_ortalama": 82 },
+        { "sinif_adi": "11-C", "ders_id": 8, "toplam_ortalama": 69 },
+        { "sinif_adi": "11-C", "ders_id": 9, "toplam_ortalama": 76 },
+        { "sinif_adi": "11-C", "ders_id": 10, "toplam_ortalama": 77 },
+      
+   
+      
+      
+
+ 
+    {
+        "sinif_adi": "10-A",
+        "ders_id": 1,
+        "toplam_ortalama": 86.97
+    },
+    {
+        "sinif_adi": "10-A",
+        "ders_id": 2,
+        "toplam_ortalama": 80.5
+    },
+    {
+        "sinif_adi": "10-A",
+        "ders_id": 3,
+        "toplam_ortalama": 77.63
+    },
+    {
+        "sinif_adi": "10-A",
+        "ders_id": 4,
+        "toplam_ortalama": 87.97
+    },
+    {
+        "sinif_adi": "10-A",
+        "ders_id": 5,
+        "toplam_ortalama": 89.33
+    },
+    {
+        "sinif_adi": "10-A",
+        "ders_id": 6,
+        "toplam_ortalama": 90.17
+    },
+    {
+        "sinif_adi": "10-A",
+        "ders_id": 7,
+        "toplam_ortalama": 91.1
+    },
+    {
+        "sinif_adi": "10-A",
+        "ders_id": 8,
+        "toplam_ortalama": 88.6
+    },
+    {
+        "sinif_adi": "10-A",
+        "ders_id": 9,
+        "toplam_ortalama": 88.8
+    },
+    {
+        "sinif_adi": "10-A",
+        "ders_id": 10,
+        "toplam_ortalama": 89.57
+    },
+    {
+        "sinif_adi": "10-B",
+        "ders_id": 1,
+        "toplam_ortalama": 87.1
+    },
+    {
+        "sinif_adi": "10-B",
+        "ders_id": 2,
+        "toplam_ortalama": 81.93
+    },
+    {
+        "sinif_adi": "10-B",
+        "ders_id": 3,
+        "toplam_ortalama": 80.2
+    },
+    {
+        "sinif_adi": "10-B",
+        "ders_id": 4,
+        "toplam_ortalama": 87.37
+    },
+    {
+        "sinif_adi": "10-B",
+        "ders_id": 5,
+        "toplam_ortalama": 89.43
+    },
+    {
+        "sinif_adi": "10-B",
+        "ders_id": 6,
+        "toplam_ortalama": 90.17
+    },
+    {
+        "sinif_adi": "10-B",
+        "ders_id": 7,
+        "toplam_ortalama": 91.93
+    },
+    {
+        "sinif_adi": "10-B",
+        "ders_id": 8,
+        "toplam_ortalama": 88.37
+    },
+    {
+        "sinif_adi": "10-B",
+        "ders_id": 9,
+        "toplam_ortalama": 88.33
+    },
+    {
+        "sinif_adi": "10-B",
+        "ders_id": 10,
+        "toplam_ortalama": 89.33
+    },
+    {
+        "sinif_adi": "10-C",
+        "ders_id": 1,
+        "toplam_ortalama": 87.07
+    },
+    {
+        "sinif_adi": "10-C",
+        "ders_id": 2,
+        "toplam_ortalama": 88.13
+    },
+    {
+        "sinif_adi": "10-C",
+        "ders_id": 3,
+        "toplam_ortalama": 85.53
+    },
+    {
+        "sinif_adi": "10-C",
+        "ders_id": 4,
+        "toplam_ortalama": 87.3
+    },
+    {
+        "sinif_adi": "10-C",
+        "ders_id": 5,
+        "toplam_ortalama": 89.43
+    },
+    {
+        "sinif_adi": "10-C",
+        "ders_id": 6,
+        "toplam_ortalama": 90.17
+    },
+    {
+        "sinif_adi": "10-C",
+        "ders_id": 7,
+        "toplam_ortalama": 91.93
+    },
+    {
+        "sinif_adi": "10-C",
+        "ders_id": 8,
+        "toplam_ortalama": 88.33
+    },
+    {
+        "sinif_adi": "10-C",
+        "ders_id": 9,
+        "toplam_ortalama": 88.3
+    },
+    {
+        "sinif_adi": "10-C",
+        "ders_id": 10,
+        "toplam_ortalama": 89.33
+    }
+]

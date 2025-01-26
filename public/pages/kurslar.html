@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elif Kolejleri - Kurslar</title>
+    <link rel="stylesheet" href="../css/anasayfa.css">
+    <style>
+        /* Tablo için iç CSS */
+        .table-container {
+            margin: 30px auto;
+            width: 90%;
+            text-align: center;
+        }
+
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+            margin: 20px 0;
+            border: 2px solid #3949ab;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .styled-table thead tr {
+            background-color: #3949ab;
+            color: white;
+            font-weight: bold;
+        }
+
+        .styled-table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .button-container {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3949ab;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button-container button:hover {
+            background-color: #2c387e;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 2px solid #3949ab;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal select {
+            margin: 10px 0;
+            width: 100%;
+            padding: 8px;
+        }
+
+        .modal button {
+            margin-top: 10px;
+        }
+
+        /* Farklı Dönemler İçin Renkler */
+        .table-container:nth-of-type(2) .styled-table {
+            background-color: #d1f2eb; /* Turkuaz */
+        }
+
+        .table-container:nth-of-type(3) .styled-table {
+            background-color: #f9e79f; /* Sarı */
+        }
+
+        .table-container:nth-of-type(4) .styled-table {
+            background-color: #fadbd8; /* Pembe */
+        }
+
+        .table-container:nth-of-type(5) .styled-table {
+            background-color: #d6eaf8; /* Açık Mavi */
+        }
+
+        /* Buton Renkleri */
+        .styled-table tbody tr td button {
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            color: white;
+        }
+
+        .styled-table tbody tr td button:nth-child(1) {
+            background-color: #ff0000; /* Kırmızı */
+        }
+
+        .styled-table tbody tr td button:nth-child(2) {
+            background-color: #4caf50; /* Yeşil */
+        }
+    </style>
+</head>
+<body>
+    <!-- Yan Menü -->
+    <div class="sidebar">
+        <h2>Elif Kolejleri</h2>
+        <img src="../images/logo.png" alt="Elif Kolejleri Logosu">
+        <ul class="menu">
+            <li><a href="anasayfa.html">ANA SAYFA</a></li>
+            <li><a href="siniflar.html">SINIFLAR</a></li>
+            <li><a href="subeler.html">ŞUBELER</a></li>
+            <li><a href="kurslar.html" class="active">KURSLAR</a></li>
+        </ul>
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Kurslar</h1>
+            <button class="logout">Çıkış</button>
+        </div>
+
+        <!-- Kurs Aç Butonu -->
+        <div class="button-container">
+            <button id="openModal">Kurs Aç</button>
+        </div>
+
+        <!-- Modal Penceresi -->
+        <div class="modal" id="modal">
+            <h3>Kurs Aç</h3>
+            <label for="classSelect">Sınıf Seç:</label>
+            <select id="classSelect">
+                <option value="9. Sınıf">9. Sınıf</option>
+                <option value="10. Sınıf">10. Sınıf</option>
+                <option value="11. Sınıf">11. Sınıf</option>
+                <option value="12. Sınıf">12. Sınıf</option>
+            </select>
+            <label for="courseSelect">Ders Seç:</label>
+            <select id="courseSelect">
+                <option value="Matematik">Matematik</option>
+                <option value="Fizik">Fizik</option>
+                <option value="Kimya">Kimya</option>
+                <option value="Biyoloji">Biyoloji</option>
+                <option value="Tarih">Tarih</option>
+                <option value="Edebiyat">Edebiyat</option>
+            </select>
+            <button id="addCourse">Ekle</button>
+            <button id="closeModal">Kapat</button>
+        </div>
+
+        <!-- Gelecek Dönem Kurs Tablosu -->
+        <div class="table-container" id="newCourseTableContainer" style="display:none;">
+            <h2>Gelecek Dönem Açılacak Kurslar</h2>
+            <table class="styled-table" id="newCourseTable">
+                <thead>
+                    <tr>
+                        <th>Ders Adı</th>
+                        <th>Şube</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Önceki Tablolar -->
+        <div class="table-container">
+            <h2>2024 Güz Dönemi Kursları</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Ders Adı</th>
+                        <th>Şube</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Matematik</td><td>11. Sınıf</td></tr>
+                    <tr><td>Matematik</td><td>12. Sınıf</td></tr>
+                    <tr><td>Fizik</td><td>10. Sınıf</td></tr>
+                    <tr><td>Fizik</td><td>12. Sınıf</td></tr>
+                    <tr><td>Kimya</td><td>10. Sınıf</td></tr>
+                    <tr><td>Biyoloji</td><td>11. Sınıf</td></tr>
+                    <tr><td>Tarih</td><td>11. Sınıf</td></tr>
+                    <tr><td>Tarih</td><td>12. Sınıf</td></tr>
+                    <tr><td>Edebiyat</td><td>10. Sınıf</td></tr>
+                    <tr><td>Edebiyat</td><td>12. Sınıf</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <h2>2023 Bahar Dönemi Kursları</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Ders Adı</th>
+                        <th>Şube</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Matematik</td><td>9. Sınıf</td></tr>
+                    <tr><td>Matematik</td><td>11. Sınıf</td></tr>
+                    <tr><td>Fizik</td><td>10. Sınıf</td></tr>
+                    <tr><td>Kimya</td><td>9. Sınıf</td></tr>
+                    <tr><td>Kimya</td><td>11. Sınıf</td></tr>
+                    <tr><td>Biyoloji</td><td>10. Sınıf</td></tr>
+                    <tr><td>Tarih</td><td>9. Sınıf</td></tr>
+                    <tr><td>Edebiyat</td><td>9. Sınıf</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <h2>2023 Güz Dönemi Kursları</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Ders Adı</th>
+                        <th>Şube</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Kimya</td><td>9. Sınıf</td></tr>
+                    <tr><td>Biyoloji</td><td>11. Sınıf</td></tr>
+                    <tr><td>Tarih</td><td>10. Sınıf</td></tr>
+                    <tr><td>Edebiyat</td><td>10. Sınıf</td></tr>
+                    <tr><td>Edebiyat</td><td>11. Sınıf</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        const openModal = document.getElementById('openModal');
+        const modal = document.getElementById('modal');
+        const closeModal = document.getElementById('closeModal');
+        const addCourse = document.getElementById('addCourse');
+        const newCourseTableContainer = document.getElementById('newCourseTableContainer');
+        const newCourseTable = document.getElementById('newCourseTable').querySelector('tbody');
+
+        openModal.addEventListener('click', () => {
+            modal.classList.add('active');
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        addCourse.addEventListener('click', () => {
+            const classSelect = document.getElementById('classSelect').value;
+            const courseSelect = document.getElementById('courseSelect').value;
+
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${courseSelect}</td>
+                <td>${classSelect}</td>
+                <td>
+                    <button onclick="this.closest('tr').remove();">İptal Et</button>
+                    <button>Onayla</button>
+                </td>
+            `;
+            newCourseTable.appendChild(newRow);
+            newCourseTableContainer.style.display = 'block';
+            modal.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/giris.css">
+</head>
+<body>
+    <div class="statistics-container">
+        <table border="1" class="stats-table">
+            <thead>
+                <tr>
+                    <th>Toplam Öğrenci</th>
+                    <th>Toplam Kurs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>183</td>
+                    <td>9</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="login-container">
+        <img src="../images/logo.png" alt="Elif Kolejleri Logo">
+
+        <h2>Giriş Yap</h2>
+        <form id="loginForm">
+            <input type="text" name="kullanici_adi" placeholder="Kullanıcı Adı" required>
+            <input type="password" name="sifre" placeholder="Şifre" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+        <p id="loginMessage"></p>
+    </div>
+
+    <script src="../js/giris.js"></script>
+</body>
+</html>

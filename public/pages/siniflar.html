@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sınıflar - Elif Kolejleri</title>
+    <link rel="stylesheet" href="../css/siniflar.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Elif Kolejleri</h2>
+        <img src="../images/logo.png" alt="Elif Kolejleri Logosu">
+        <ul class="menu">
+            <li><a href="anasayfa.html">ANA SAYFA</a></li>
+            <li><a href="siniflar.html" class="active">SINIFLAR</a></li>
+            <li><a href="subeler.html">ŞUBELER</a></li>
+            <li><a href="kurslar.html">KURSLAR</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="header-left">
+                <h1>Sınıflar - Ders Başarı Oranları</h1>
+                <select id="donemSecimi" class="small-select">
+                    <option value="2024-guz" selected>2024 Güz</option>
+                    <option value="2023-bahar">2023 Bahar</option>
+                    <option value="2023-guz">2023 Güz</option>
+                </select>
+            </div>
+            <button class="logout">Çıkış</button>
+        </div>
+
+        <!-- Genel Ortalama Grafiği -->
+        <div id="genelOrtalamaContainer" class="chart"></div>
+
+        <!-- Şube Grafikleri -->
+
+        <div class="charts-container" id="chartsContainer"></div>
+    </div>
+
+    <script src="../js/siniflar.js"></script>
+</body>
+</html>
