@@ -1,4 +1,4 @@
-/* General Page Styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,9 +10,9 @@ body {
     height: 100vh;
 }
 
-/* Login Container */
+
 .login-container {
-    max-width: 400px; /* Giriş kutusunun genişliği */
+    max-width: 400px; 
     width: 100%;
     padding: 20px;
     background-color: #ffffff;
@@ -21,15 +21,15 @@ body {
     text-align: center;
 }
 
-/* Logo */
+
 .login-container img {
-    max-width: 120px; /* Logonun genişliği */
+    max-width: 120px;
     margin-bottom: 20px;
-    border-radius: 50%; /* Yuvarlak çerçeve */
+    border-radius: 50%;
     border: 2px solid #1e88e5;
 }
 
-/* Title */
+
 .login-container h2 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -37,11 +37,11 @@ body {
     font-weight: bold;
 }
 
-/* Form */
+
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Form elemanları arası boşluk */
+    gap: 15px; 
 }
 
 form input {
